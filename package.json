@@ -39,19 +39,19 @@
   },
   "homepage": "https://magiclen.org/node-js-crc/",
   "dependencies": {
-    "@types/node": "^17.0.32"
+    "@types/node": "^18.0.0"
   },
   "devDependencies": {
     "@napi-rs/cli": "^2.10.0",
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
     "cargo-cp-artifact": "^0.1.6",
     "chai": "^4.3.6",
-    "eslint": "^8.15.0",
+    "eslint": "^8.18.0",
     "mocha": "^10.0.0",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
   }
 }
