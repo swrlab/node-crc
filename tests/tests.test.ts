@@ -1,7 +1,7 @@
 import { describe, it } from "mocha";
 import { expect } from "chai";
 
-import * as crc from "..";
+const crc = require("../node-crc.node");
 
 describe("CRC-8 Family", function () {
     it("should calculate CRC-8(CRC-8-ATM)", function () {
