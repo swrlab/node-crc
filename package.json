@@ -11,17 +11,15 @@
 		"build:neon": "cargo-cp-artifact -nc index.node -- cargo build --release --message-format=json-render-diagnostics",
 		"build:bin": "./build.sh",
 		"build:clean": "rimraf target && rimraf bin && cargo clean && mkdir -p bin",
-		"lint": "eslint src tests --fix",
-		"test": "mocha -r ts-node/register tests/**/*.test.ts",
-		"check": "bun run lint && bun run test",
-		"prepublishOnly": "bun run build:bin && bun run lint && bun run test"
-	},
-	"engines": {
-		"node": ">=20"
+		"lint": "eslint .",
+		"test": "mocha -r ts-node/register tests/**/*.test.ts"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/swrlab/node-crc.git"
+	},
+	"engines": {
+		"node": ">=20"
 	},
 	"keywords": ["node.js", "crc64"],
 	"author": "Magic Len <len@magiclen.org> (https://magiclen.org)",

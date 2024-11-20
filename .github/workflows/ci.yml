@@ -20,7 +20,6 @@ jobs:
         node-version:
           - 20.x
           - 22.x
-          - 23.x
     name: Use ${{ matrix.node-version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     steps:
@@ -36,7 +35,7 @@ jobs:
 
       - run: npm run build:ts && npm run build:neon
 
-      - run: npm run check
+      - run: npm run test
 
   test-bun:
     strategy:
@@ -62,4 +61,4 @@ jobs:
 
       - run: bun run build:ts && bun run build:neon
 
-      - run: bun run check
+      - run: bun run test

@@ -3,23 +3,7 @@ import { audiolab } from '@swrlab/style-guide/eslint/index'
 export default audiolab(
 	[
 		{
-			ignores: [
-				/* ignore these files, since biome already covers them */
-				'**/*.mjs',
-				'**/*.js',
-				'**/*.jsx',
-				'**/*.ts',
-				'**/*.tsx',
-				'**/*.json',
-				'**/*.jsonc',
-				/* ignore these directories */
-				'**/static/**',
-				'**/store/**',
-				'**/keys/**',
-				'**/node_modules/**',
-				'**/test/*.json',
-				'**/test/*.xml',
-			],
+			ignores: ['node_modules/**', 'lib/**', 'target/**', 'test/*.json', 'test/*.xml'],
 		},
 		{
 			languageOptions: {
@@ -59,18 +43,14 @@ export default audiolab(
 						ignores: [],
 					},
 				],
-			},
-		},
-		{
-			files: ['**/*.vue'],
-			rules: {
-				'n/no-unsupported-features/node-builtins': 'off',
+				'jsonc/no-comments': 'warn',
+				'jsonc/sort-keys': 'warn',
 			},
 		},
 	],
 	{
 		prettier: true,
 		comments: true,
-		vue: true,
+		vue: false,
 	}
 )
