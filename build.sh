@@ -2,6 +2,7 @@
 
 # Exit when any command fails
 set -e
+set -x
 
 # Define archs [0], libs [1] and targets [2]
 
@@ -39,22 +40,18 @@ for (( i=0; i<${#archs[@]}; i++ )); do
 
    # Check if binary file already exists
    if [[ -f "$destination" ]]; then
-      echo
       echo "Skipping ${archs[i]} (binary exists)"
       echo "==========================================="
    else
       # Install toolchain and use cargo for darwin
       if [[ "${archs[i]}" = *"darwin"* ]]; then
-         echo
          echo "Install toolchain for ${archs[i]}"
          echo "========================================"
          rustup target add "${archs[i]}"
 
-         echo
          echo "Building binary for ${archs[i]}"
          cargo build --"$flavor" --target="${archs[i]}"
       else
-         echo
          echo "Building binary for ${archs[i]}"
          echo "========================================"
          # Add build flags for linux musl variant
@@ -65,13 +62,10 @@ for (( i=0; i<${#archs[@]}; i++ )); do
          fi
       fi
 
-      echo
       echo "Copy binary ${libs[i]} to bin/${targets[i]}"
       cp "$export" "$destination"
 
-      echo
       echo "Clean build folder: targets/$flavor"
-      echo
       rimraf "$temp"
 
       echo "Done"
