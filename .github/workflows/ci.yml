@@ -34,7 +34,7 @@ jobs:
 
       - run: npm install
 
-      - run: npm run build
+      - run: npm run build:ts && npm run build:neon
 
       - run: npm run check
 
@@ -60,6 +60,6 @@ jobs:
 
       - run: bun install
 
-      - run: bun run build
+      - run: bun run build:ts && bun run build:neon
 
       - run: bun run check
