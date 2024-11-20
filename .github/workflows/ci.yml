@@ -38,7 +38,7 @@ jobs:
 
       - run: npm run check
 
-  test-node:
+  test-bun:
     strategy:
       fail-fast: false
       matrix:
