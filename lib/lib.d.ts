@@ -1,4 +1,5 @@
 /// <reference types="node" />
+/// <reference types="node" />
 /**
  * Create a CRC instance by providing the length of bits, expression, reflection, an initial value and a final xor value.
  */

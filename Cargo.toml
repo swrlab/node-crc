@@ -1,12 +1,11 @@
 [package]
 name = "node-crc"
-version = "2.1.0"
+version = "3.0.0"
 edition = "2021"
-repository = "https://github.com/magiclen/node-crc"
-homepage = "https://magiclen.org/node-js-crc/"
-keywords = ["node.js", "crc8", "crc16", "crc32", "crc64"]
+repository = "https://github.com/swrlab/node-crc"
+keywords = ["node.js", "crc64"]
 categories = []
-description = "To compute CRC values by providing the length of bits, expression, reflection, an initial value and a final xor value. It has many built-in CRC functions."
+description = "To compute CRC64 values using built-in functions and pre-built binaries."
 license = "MIT"
 publish = false
 
