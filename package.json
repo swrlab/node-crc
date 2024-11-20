@@ -7,7 +7,6 @@
 	"scripts": {
 		"build": "bun run build:ts && bun run build:neon",
 		"build:ts": "tsc",
-		"build:watch": "tsc -w",
 		"build:neon": "cargo-cp-artifact -nc index.node -- cargo build --release --message-format=json-render-diagnostics",
 		"build:bin": "./build.sh",
 		"build:clean": "rimraf target && rimraf bin && cargo clean && mkdir -p bin",
