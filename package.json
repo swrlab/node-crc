@@ -38,7 +38,7 @@
 	},
 	"homepage": "https://magiclen.org/node-js-crc/",
 	"dependencies": {
-		"@types/node": "^18.11.17",
+		"@types/node": "^22.13.1",
 		"detect-libc": "^2.0.1"
 	},
 	"devDependencies": {
